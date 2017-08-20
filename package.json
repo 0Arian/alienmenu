@@ -5,6 +5,7 @@
   "description": "A simple reddit menu application",
   "private": true,
   "dependencies": {
+    "menubar": "^5.2.3",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.11"

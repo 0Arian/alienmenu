@@ -12,7 +12,7 @@ class StoryList extends React.Component {
               </td>
               <td>
                 <p className="title">
-                  <a href="{sub.data.url}">
+                  <a href={sub.data.url}>
                     {sub.data.title}
                   </a>
                 </p>

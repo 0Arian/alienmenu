@@ -13,10 +13,12 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    let _this = this;
-    let cbname = `fn${Date.now()}`;
-    let script = document.createElement("script");
+    var _this = this;
+    var cbname = `fn${Date.now()}`;
+    console.log(cbname);
+    var script = document.createElement("script");
     script.src = `https://www.reddit.com/reddits.json?jsonp=${cbname}`;
+    console.log(script.src);
 
     window[cbname] = function(jsonData) {
       _this.setState({
@@ -31,7 +33,7 @@ class App extends React.Component {
 
   setSelectedSub = (sub) => {
     var _this = this;
-    var cbname = 'fn${Date.now()}';
+    var cbname = `fn${Date.now()}`;
     var script = document.createElement("script");
     script.src = `https://www.reddit.com${sub.data.url}.json?sort=top&t=month&jsonp=${cbname}`;
 

@@ -2,6 +2,7 @@ import React from 'react';
 
 class Subreddit extends React.Component {
   onClick = () => {
+    console.log(this.props.sub);
     this.props.subSelected(this.props.sub);
   };
 
