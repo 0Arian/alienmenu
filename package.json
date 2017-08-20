@@ -1,0 +1,18 @@
+{
+  "name": "alienmenu",
+  "version": "0.0.2",
+  "author": "Arian Moslem <amoslem678@gmail.com>",
+  "description": "A simple reddit menu application",
+  "private": true,
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-scripts": "1.0.11"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
