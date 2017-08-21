@@ -1,3 +1,4 @@
+import '../css/Navigation.css';
 import React from 'react';
 import Subreddit from './Subreddit';
 

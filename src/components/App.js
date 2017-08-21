@@ -1,3 +1,4 @@
+import '../css/App.css';
 import React from 'react';
 import Navigation from './Navigation';
 import StoryList from './StoryList';
