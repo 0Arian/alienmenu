@@ -1,11 +1,18 @@
+import '../css/StoryList.css';
 import React from 'react';
 
 class StoryList extends React.Component {
   render() {
     return (
+      <p> {this.props.match.params.subId} </p>
+    )
+  }
+  /*
+  render() {
+    return (
       <table>
         <tbody>
-          {this.props.subs.map(sub => 
+          {this.props.params.route.map(sub => 
             <tr key={sub.data.id}>
               <td>
                 <p className="score">{sub.data.score}</p>
@@ -27,6 +34,7 @@ class StoryList extends React.Component {
       </table>
     );
   }
+  */
 }
 
 export default StoryList;

@@ -16,10 +16,8 @@ class App extends React.Component {
   componentDidMount() {
     var _this = this;
     var cbname = `fn${Date.now()}`;
-    console.log(cbname);
     var script = document.createElement("script");
     script.src = `https://www.reddit.com/reddits.json?jsonp=${cbname}`;
-    console.log(script.src);
 
     window[cbname] = function(jsonData) {
       _this.setState({
@@ -62,7 +60,6 @@ class App extends React.Component {
           subs={this.state.navigationSubs}
           subSelected={this.setSelectedSub}
         />
-        <StoryList subs={this.state.storySubs} />
       </div>
     );
   }
