@@ -1,5 +1,7 @@
+import '../css/SubThreads.css';
 import React from 'react';
 import Thread from './Thread';
+import { Link } from 'react-router-dom';
 
 class SubThreads extends React.Component {
   constructor(props) {
@@ -35,9 +37,9 @@ class SubThreads extends React.Component {
   render() {
     return (
       <div>
-        <h1>{this.props.match.params.subId}</h1>
-        <Thread threads={this.state.threads} />
+        <Thread threads={this.state.threads} id={this.props.match.params.subId} />
       </div>
+
     )
   }
 }

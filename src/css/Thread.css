@@ -2,7 +2,7 @@
     font-size: 36px;
     margin: 15px;
     color: #afb3b9;
-  }
+}
   
   .title {
     font-size: 18px;
@@ -20,4 +20,10 @@
   .author a {
     color: #afb3b9;
     text-decoration: none;
+  }
+
+  .backLink {
+    text-decoration: none;
+    color: #90CAF9;
+    margin: 15px;
   }

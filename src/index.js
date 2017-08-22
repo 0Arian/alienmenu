@@ -13,7 +13,9 @@ const Root = () => {
     <Router>
       <div>
         <Route exact={true} path="/" component={App}/>
-        <Route path="/r/:subId" component={SubThreads}/>
+        <Route exact={true} path="/r/:subId" component={SubThreads}/>
+        <Route path="/r/:subId/comments/:threadId/:shortTitle" 
+          component={App}/>
       </div>
     </Router>
   )
