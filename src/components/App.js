@@ -1,7 +1,6 @@
 import '../css/App.css';
 import React from 'react';
 import Navigation from './Navigation';
-import StoryList from './StoryList';
 
 class App extends React.Component {
   constructor(props) {

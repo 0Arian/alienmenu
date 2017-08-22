@@ -2,11 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
 import App from './components/App';
-import StoryList from './components/StoryList';
+import SubThreads from './components/SubThreads';
 import registerServiceWorker from './registerServiceWorker';
 
 const Root = () => {
@@ -14,7 +13,7 @@ const Root = () => {
     <Router>
       <div>
         <Route exact={true} path="/" component={App}/>
-        <Route path="/r/:subId" component={StoryList}/>
+        <Route path="/r/:subId" component={SubThreads}/>
       </div>
     </Router>
   )
