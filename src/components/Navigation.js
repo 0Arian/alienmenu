@@ -3,10 +3,6 @@ import React from 'react';
 import Subreddit from './Subreddit';
 
 class Navigation extends React.Component {
-    setSelectedSub = (sub) => {
-        this.props.subSelected(sub);
-    }
-
     render() {
         var subreddits = this.props.subs
             .sort((a, b) => 
@@ -15,7 +11,6 @@ class Navigation extends React.Component {
             .map(sub => 
                 <Subreddit
                     sub={sub}
-                    subSelected={this.setSelectedSub}
                     key={sub.data.id}
                     selected={sub.data.url === this.props.activeUrl}
                 />
