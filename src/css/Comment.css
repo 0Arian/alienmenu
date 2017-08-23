@@ -10,7 +10,16 @@ h2 {
     text-decoration: none;
 }
 
-.spaceAbove {
-    margin-top: 7px;
+.italicText {
     font-style: italic;
+}
+
+.brTop {
+    line-height: 1px;
+}
+
+.score {
+    font-size: 22px;
+    margin: 15px;
+    color: #afb3b9;
 }

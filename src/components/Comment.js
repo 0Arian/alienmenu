@@ -6,30 +6,39 @@ class Comment extends React.Component {
   render() {
     let myComponent;
     let title;
+    let key;
     if(this.props.comments.length === 0){
       myComponent = null;
       title = null;
+      key = `key${Date.now}`;
     } else {
+      key = this.props.comments[0].data.children[0].data.id;
       myComponent = 
-        this.props.comments[1].data.children.map(comment => 
-          <tr>
-            <td>
-              {comment.data.score}
-            </td>
-            <td>
-              <p key={comment.data.id} className="author">
-                {comment.data.body}
-                <div className="spaceAbove">
-                Posted by <a href={`http://reddit.com/u/${comment.data.author}`}> {comment.data.author}</a>
-                </div>
-              </p>
-            </td>
-          </tr>
-        );
+        this.props.comments[1].data.children.map(comment => {
+          if(comment.data.body !== "" || comment.data.body !=="[removed]"){ 
+            return(
+            <tr key={comment.data.id}>
+              <td>
+                <p className="score">
+                  {comment.data.score}
+                </p>
+              </td>
+              <td>
+                <p className="author">
+                  {comment.data.body}<br/>
+                  <br className="brTop"/>
+                  <span className="italicText">Posted by <a href={`http://reddit.com/u/${comment.data.author}`}> {comment.data.author}</a></span>
+               </p>
+              </td>
+            </tr>
+          )}
+        else {
+          return
+        }});
       title = this.props.comments[0].data.children[0].data.title;
     }
     return(
-      <div>
+      <div key={key}>
         <table>
           <tbody>
             <tr>
