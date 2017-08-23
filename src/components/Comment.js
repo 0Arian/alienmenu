@@ -12,7 +12,19 @@ class Comment extends React.Component {
     } else {
       myComponent = 
         this.props.comments[1].data.children.map(comment => 
-          <p key={comment.data.id}>{comment.data.body}</p>
+          <tr>
+            <td>
+              {comment.data.score}
+            </td>
+            <td>
+              <p key={comment.data.id} className="author">
+                {comment.data.body}
+                <div className="spaceAbove">
+                Posted by <a href={`http://reddit.com/u/${comment.data.author}`}> {comment.data.author}</a>
+                </div>
+              </p>
+            </td>
+          </tr>
         );
       title = this.props.comments[0].data.children[0].data.title;
     }
@@ -34,6 +46,7 @@ class Comment extends React.Component {
                 </h2>
               </td>
             </tr>
+            {myComponent}
           </tbody>
         </table>
       </div>

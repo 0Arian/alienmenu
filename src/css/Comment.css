@@ -1,3 +1,16 @@
 h2 {
     font-weight: 300;
 }
+
+.author {
+    font-size: 16px;
+}
+.author a {
+    color: #afb3b9;
+    text-decoration: none;
+}
+
+.spaceAbove {
+    margin-top: 7px;
+    font-style: italic;
+}

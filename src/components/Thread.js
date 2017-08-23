@@ -26,15 +26,14 @@ class Thread extends React.Component {
               </td>
               <td>
                 <p className="title">
-                  {/* CREATE A LINK TO EACH COMMENT*/}
-                  <a href={post.data.permalink}>
+                  {/* CREATE A LINK TO EACH THREAD*/}
+                  <a href={post.data.url}>
                     {post.data.title}                    
                   </a>
                 </p>
                 <p className="author">
                   Posted by <a href={`http://reddit.com/u/${post.data.author}`}>
-                    {post.data.author}
-                  </a>
+                    {post.data.author}</a> <Link to={post.data.permalink}><span className="span">Comments</span></Link>
                 </p>
               </td>
             </tr>
