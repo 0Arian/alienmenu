@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import App from './components/App';
 import SubThreads from './components/SubThreads';
+import ViewPost from './components/ViewPost';
 import registerServiceWorker from './registerServiceWorker';
 
 const Root = () => {
@@ -15,7 +16,7 @@ const Root = () => {
         <Route exact={true} path="/" component={App}/>
         <Route exact={true} path="/r/:subId" component={SubThreads}/>
         <Route path="/r/:subId/comments/:threadId/:shortTitle" 
-          component={App}/>
+          component={ViewPost}/>
       </div>
     </Router>
   )

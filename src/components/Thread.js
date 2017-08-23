@@ -27,7 +27,7 @@ class Thread extends React.Component {
               <td>
                 <p className="title">
                   {/* CREATE A LINK TO EACH COMMENT*/}
-                  <a href={post.data.url}>
+                  <a href={post.data.permalink}>
                     {post.data.title}                    
                   </a>
                 </p>

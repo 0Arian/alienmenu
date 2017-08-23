@@ -1,7 +1,6 @@
 import '../css/SubThreads.css';
 import React from 'react';
 import Thread from './Thread';
-import { Link } from 'react-router-dom';
 
 class SubThreads extends React.Component {
   constructor(props) {
@@ -17,6 +16,7 @@ class SubThreads extends React.Component {
     var cbname = `fn${Date.now()}`;
     var script = document.createElement("script");
     script.src = `https://www.reddit.com/r/${subName}.json?sort=top&t=month&jsonp=${cbname}`;
+    console.log(script.src);
 
     window[cbname] = function(jsonData) {
       _this.setState({
