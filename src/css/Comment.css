@@ -14,6 +14,11 @@ h2 {
     font-style: italic;
 }
 
+.italicTextMain {
+    font-size: 16px;
+    font-style: italic;
+}
+
 .brTop {
     line-height: 1px;
 }
@@ -22,4 +27,24 @@ h2 {
     font-size: 22px;
     margin: 15px;
     color: #afb3b9;
+}
+
+.threadScore {
+    font-size: 24px;
+    margin: 15px;
+    color: #90CAF9;
+}
+
+tr .mainRow {
+    display: table-row;
+    border-color: White;
+}
+
+.mainAuthor {
+    font-size: 24px;
+}
+
+.mainAuthor a {
+    color: #afb3b9;
+    text-decoration: none;
 }

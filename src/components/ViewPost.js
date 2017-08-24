@@ -20,8 +20,6 @@ class ViewPost extends React.Component {
       _this.setState({
         comments: jsonData,
       });
-      console.log("json loaded");
-      console.log(jsonData);
       delete window[cbname];
       document.head.removeChild(script);
     };
