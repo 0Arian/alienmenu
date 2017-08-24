@@ -5,19 +5,19 @@ import Moment from 'react-moment';
 
 class Comment extends React.Component {
   render() {
-    let myComponent;
+    let CommentsTable;
     let title;
     let key;
     if(this.props.comments.length === 0){
-      myComponent = <h1>Loading...</h1>;
+      CommentsTable = <tr><td><h1>Loading...</h1></td></tr>;
       title = null;
       key = `key${Date.now}`;
     } else {
       key = this.props.comments[0].data.children[0].data.id;
-      myComponent = 
+      CommentsTable = 
         this.props.comments[1].data.children.map(comment => {
           if(comment.kind === "more" || comment.data.author === "[deleted]"){
-            return '';
+            return <tr key={key}></tr>;
           }
           return(
           <tr key={comment.data.id}>
@@ -56,7 +56,7 @@ class Comment extends React.Component {
                 </h2>
               </td>
             </tr>
-            {myComponent}
+            {CommentsTable}
           </tbody>
         </table>
       </div>
