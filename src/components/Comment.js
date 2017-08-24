@@ -30,7 +30,7 @@ class Comment extends React.Component {
               <p className="author">
                 {comment.data.body}<br/>
                 <br className="brTop"/>
-                <span className="italicText">Submitted <Moment fromNow>{comment.data.created * 1000}</Moment> ago by <a href={`http://reddit.com/u/${comment.data.author}`}> {comment.data.author}</a></span>
+                <span className="italicText">Submitted <Moment fromNow>{comment.data.created_utc * 1000}</Moment> by <a href={`http://reddit.com/u/${comment.data.author}`}> {comment.data.author}</a></span>
               </p>
             </td>
           </tr>

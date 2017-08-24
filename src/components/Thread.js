@@ -33,7 +33,7 @@ class Thread extends React.Component {
                   </a>
                 </p>
                 <p className="author">
-                  Submitted <Moment fromNow>{post.data.created * 1000}</Moment> ago by <a href={`http://reddit.com/u/${post.data.author}`}>
+                  Submitted <Moment fromNow>{post.data.created_utc * 1000}</Moment> by <a href={`http://reddit.com/u/${post.data.author}`}>
                     {post.data.author}</a> <Link to={post.data.permalink}><span className="span">Comments</span></Link>
                 </p>
               </td>
