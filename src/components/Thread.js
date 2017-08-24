@@ -1,6 +1,7 @@
 import '../css/Thread.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Moment from 'react-moment';
 
 class Thread extends React.Component {
   render() {
@@ -32,7 +33,7 @@ class Thread extends React.Component {
                   </a>
                 </p>
                 <p className="author">
-                  Posted by <a href={`http://reddit.com/u/${post.data.author}`}>
+                  Submitted <Moment fromNow>{post.data.created * 1000}</Moment> ago by <a href={`http://reddit.com/u/${post.data.author}`}>
                     {post.data.author}</a> <Link to={post.data.permalink}><span className="span">Comments</span></Link>
                 </p>
               </td>
