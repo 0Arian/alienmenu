@@ -1,6 +1,7 @@
 import '../css/Comment.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Moment from 'react-moment';
 
 class Comment extends React.Component {
   render() {
@@ -8,33 +9,33 @@ class Comment extends React.Component {
     let title;
     let key;
     if(this.props.comments.length === 0){
-      myComponent = null;
+      myComponent = <h1>Loading...</h1>;
       title = null;
       key = `key${Date.now}`;
     } else {
       key = this.props.comments[0].data.children[0].data.id;
       myComponent = 
         this.props.comments[1].data.children.map(comment => {
-          if(comment.data.body !== "" || comment.data.body !=="[removed]"){ 
-            return(
-            <tr key={comment.data.id}>
-              <td>
-                <p className="score">
-                  {comment.data.score}
-                </p>
-              </td>
-              <td>
-                <p className="author">
-                  {comment.data.body}<br/>
-                  <br className="brTop"/>
-                  <span className="italicText">Posted by <a href={`http://reddit.com/u/${comment.data.author}`}> {comment.data.author}</a></span>
-               </p>
-              </td>
-            </tr>
-          )}
-        else {
-          return
-        }});
+          if(comment.kind === "more" || comment.data.author === "[deleted]"){
+            return '';
+          }
+          return(
+          <tr key={comment.data.id}>
+            <td>
+              <p className="score">
+                {comment.data.score}
+              </p>
+            </td>
+            <td>
+              <p className="author">
+                {comment.data.body}<br/>
+                <br className="brTop"/>
+                <span className="italicText">Submitted <Moment fromNow>{comment.data.created * 1000}</Moment> ago by <a href={`http://reddit.com/u/${comment.data.author}`}> {comment.data.author}</a></span>
+              </p>
+            </td>
+          </tr>
+        )
+      });
       title = this.props.comments[0].data.children[0].data.title;
     }
     return(
