@@ -2,25 +2,27 @@ import '../css/Comment.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Moment from 'react-moment';
+import ReactHtmlParser from 'react-html-parser';
 
 class Comment extends React.Component {
   render() {
-    let CommentsTable, HeaderRow, title, key;
+    let CommentsTable, HeaderRow, title, key, headerKey;
 
     if(this.props.comments.length === 0){
       CommentsTable = null;
       HeaderRow = <tr><td><h1>Loading...</h1></td></tr>;
       title = null;
-      key = `key${Date.now}`;
+      key = `key${Date.now()}`;
+      headerKey = `key${Date.now() + Date.now()}`
     } 
-    
+
     else {
       key = this.props.comments[0].data.children[0].data.id;
       let signature = this.props.comments[0].data.children[0].data;
 
 
       HeaderRow = 
-        <tr key={key} className="mainRow">
+        <tr key={headerKey} className="mainRow">
           <td>
             <p className="threadScore">
               {signature.score}
@@ -28,8 +30,7 @@ class Comment extends React.Component {
           </td>
           <td>
             <p className="mainAuthor">
-              {signature.selftext}<br/>
-              <br className="brTop"/>
+              { ReactHtmlParser(ReactHtmlParser(signature.selftext_html)) }<br/>
               <span className="italicTextMain">Submitted <Moment fromNow>{signature.created_utc * 1000}</Moment> by <a href={`http://reddit.com/u/${signature.author}`}> {signature.author}</a></span>
             </p>
           </td>
@@ -49,8 +50,7 @@ class Comment extends React.Component {
             </td>
             <td>
               <p className="author">
-                {comment.data.body}<br/>
-                <br className="brTop"/>
+                {ReactHtmlParser(ReactHtmlParser(comment.data.body_html))}<br/>
                 <span className="italicText">Submitted <Moment fromNow>{comment.data.created_utc * 1000}</Moment> by <a href={`http://reddit.com/u/${comment.data.author}`}> {comment.data.author}</a></span>
               </p>
             </td>

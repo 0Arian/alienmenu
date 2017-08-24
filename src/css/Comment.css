@@ -6,12 +6,13 @@ h2 {
     font-size: 16px;
 }
 .author a {
-    color: #afb3b9;
+    color: #90CAF9;
     text-decoration: none;
 }
 
 .italicText {
     font-style: italic;
+    color: #afb3b9;
 }
 
 .italicTextMain {
@@ -32,7 +33,7 @@ h2 {
 .threadScore {
     font-size: 24px;
     margin: 15px;
-    color: #90CAF9;
+    color: #9E66B6;
 }
 
 tr .mainRow {
@@ -41,10 +42,10 @@ tr .mainRow {
 }
 
 .mainAuthor {
-    font-size: 24px;
+    font-size: 18px;
 }
 
 .mainAuthor a {
-    color: #afb3b9;
+    color: #90CAF9;
     text-decoration: none;
 }
