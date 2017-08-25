@@ -26,7 +26,7 @@ class Navigation extends React.Component {
                 <ul>
                     <li>
                         <form className="sub-selector" onSubmit={(event) => this.goToSub(event)}>
-                            <input type="text" name="subSelection" placeholder="Enter SubReddit name"
+                            <input type="text" name="subSelection" placeholder="Enter Custom SubReddit Name"
                                 ref={(input) => {this.subInput = input}}>
                             </input>
                         </form>

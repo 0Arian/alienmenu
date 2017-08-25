@@ -33,17 +33,22 @@
     border: none;
     background-color: #3CBC8D;
     color: white;
+    
 }
 
 ::-webkit-input-placeholder {
     font-style: italic;
+    color: white;
  }
  :-moz-placeholder {
     font-style: italic;  
+    color: white;
  }
  ::-moz-placeholder {
     font-style: italic;  
+    color: white;
  }
  :-ms-input-placeholder {  
     font-style: italic; 
+    color: white;
  }
