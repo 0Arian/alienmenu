@@ -6,7 +6,7 @@ import Moment from 'react-moment';
 class Thread extends React.Component {
   render() {
     return (
-      <table>
+      <table className="container">
         <tbody>
           <tr>
             <td>
