@@ -19,3 +19,31 @@
 .navigation .selected {
     background-color: #90CAF9;
 }
+
+.sub-selector {
+    background: white;
+    max-width: 450px;
+}
+
+.sub-selector input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 0px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: #3CBC8D;
+    color: white;
+}
+
+::-webkit-input-placeholder {
+    font-style: italic;
+ }
+ :-moz-placeholder {
+    font-style: italic;  
+ }
+ ::-moz-placeholder {
+    font-style: italic;  
+ }
+ :-ms-input-placeholder {  
+    font-style: italic; 
+ }

@@ -1,8 +1,13 @@
 import '../css/Navigation.css';
 import React from 'react';
 import Subreddit from './Subreddit';
+import {withRouter} from 'react-router-dom';
 
 class Navigation extends React.Component {
+    goToSub(event){
+        const subName = this.subInput.value;
+        this.props.history.push(`/r/${subName}`);
+    }
     render() {
         var subreddits = this.props.subs
             .sort((a, b) => 
@@ -19,6 +24,13 @@ class Navigation extends React.Component {
         return (
             <div className="navigation">
                 <ul>
+                    <li>
+                        <form className="sub-selector" onSubmit={(event) => this.goToSub(event)}>
+                            <input type="text" name="subSelection" placeholder="Enter SubReddit name"
+                                ref={(input) => {this.subInput = input}}>
+                            </input>
+                        </form>
+                    </li>
                     {subreddits}
                 </ul>
             </div>
@@ -26,4 +38,4 @@ class Navigation extends React.Component {
     }
 }
 
-export default Navigation;
+export default withRouter(Navigation);
