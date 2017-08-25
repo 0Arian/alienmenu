@@ -62,7 +62,7 @@ class Comment extends React.Component {
 
     return(
       <div key={key}>
-        <table>
+        <table className="container">
           <tbody>
             <tr>
               <td>

@@ -49,3 +49,7 @@ tr .mainRow {
     color: #90CAF9;
     text-decoration: none;
 }
+
+.container tr:nth-child(even) {
+    background-color: #343434;
+}
