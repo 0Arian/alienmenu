@@ -31,7 +31,7 @@ class Comment extends React.Component {
           <td>
             <p className="mainAuthor">
               { ReactHtmlParser(ReactHtmlParser(signature.selftext_html)) }<br/>
-              <span className="italicTextMain">Submitted <Moment fromNow>{signature.created_utc * 1000}</Moment> by <a href={`http://reddit.com/u/${signature.author}`}> {signature.author}</a></span>
+              <span className="italicTextMain">Submitted <Moment fromNow>{signature.created_utc * 1000}</Moment> by <a href={`http://reddit.com/u/${signature.author}`}> {signature.author}</a> <font color="red">[Original Poster]</font></span>
             </p>
           </td>
         </tr>;
