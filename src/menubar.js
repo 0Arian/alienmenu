@@ -13,6 +13,7 @@ var mb = menubar({
     index: `http://localhost:${port}`,
     width: 750,
     height: 1100,
+    icon: 'IconTemplate.png'
 })
 
 mb.on('ready', () => console.log('App Started'))
