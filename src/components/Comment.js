@@ -63,7 +63,7 @@ class Comment extends React.Component {
     return(
       <div key={key}>
         <table className="container">
-          <tbody>
+          <tbody className="container">
             <tr>
               <td>
                 <h1>
