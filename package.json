@@ -5,6 +5,7 @@
   "description": "A simple reddit menu application",
   "private": true,
   "dependencies": {
+    "electron": "^1.7.5",
     "menubar": "^5.2.3",
     "moment": "^2.18.1",
     "react": "^15.6.1",
@@ -20,6 +21,7 @@
     "start": "BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-all": "electron-packager ./src/menubar.js --version 1.7.5 --platform all --icon ./Assets/logo ./dist --overwrite --no-prune"
   }
 }

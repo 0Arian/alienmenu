@@ -56,3 +56,8 @@ typings/
 
 # dotenv environment variables file
 .env
+
+.-dist-darwin-x64/
+.-dist-linux-x64/
+.-dist-mas-x64/
+.-dist-win32-x64/
