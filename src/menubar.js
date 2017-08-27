@@ -9,7 +9,9 @@ const server = serve('./build', {
 })
 
 var mb = menubar({
-    index: `http://localhost:${port}`
+    index: `http://localhost:${port}`,
+    width: 650,
+    heigth: 1100,
 })
 
 mb.on('ready', () => console.log('app is ready'))
