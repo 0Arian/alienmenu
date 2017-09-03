@@ -1,8 +1,11 @@
 const menubar = require('menubar')
 const serve = require('serve')
 const path = require('path')
+const fixPath = require('fix-path');
 
-const port = process.env.PORT ? (process.env.PORT - 100) : 7160
+fixPath()
+
+const port = process.env.PORT ? (process.env.PORT - 100) : 5000
 
 const server = serve('./build', {
   single: ["./build"],
