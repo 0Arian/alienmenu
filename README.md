@@ -2,5 +2,7 @@
 
 A simple menubar application to quickly access content
 
+![ScreenShot](https://i.imgur.com/gkw9Tk5.png)
+
 # BUILD STATUS
-**Currently in Development**
+**Currently in Testing**
