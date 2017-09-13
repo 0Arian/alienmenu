@@ -7,7 +7,9 @@
   "dependencies": {
     "electron": "^1.7.5",
     "fix-path": "^2.1.0",
-    "menubar": "^5.2.3",
+    "menubar": "^5.2.3"
+  },
+  "devDependencies": {
     "moment": "^2.18.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
