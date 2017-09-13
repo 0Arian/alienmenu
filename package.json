@@ -23,6 +23,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "build-all": "electron-packager . alienmenu --version=1.7.5 --platform=all --icon=./Assets/logo --out=./dist --overwrite --no-prune"
+    "build-all": "electron-packager . alienmenu --ignore='./build/' --version=1.7.5 --platform=all --icon=./Assets/logo --out=./dist --overwrite --no-prune"
   }
 }
