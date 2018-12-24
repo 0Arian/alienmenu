@@ -16,7 +16,7 @@ class App extends React.Component {
     var _this = this;
     var cbname = `fn${Date.now()}`;
     var script = document.createElement("script");
-    script.src = `https://www.reddit.com/reddits.json?jsonp=${cbname}`;
+    script.src = `http://localhost:3000`;
 
     window[cbname] = function(jsonData) {
       _this.setState({
