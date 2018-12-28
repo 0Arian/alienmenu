@@ -5,6 +5,7 @@ import Moment from 'react-moment';
 
 class Thread extends React.Component {
   render() {
+    let sync = this.props.threads.slice(0, 60);
     return (
       <table className="container">
         <tbody>
@@ -20,10 +21,13 @@ class Thread extends React.Component {
               <h1>{this.props.id}</h1>
             </td>
           </tr>
-          {this.props.threads.map(post =>
+          {sync.map((post, index) =>
             <tr key={post.data.id}>
               <td>
                 <p className="score">{post.data.score}</p>
+              </td>
+              <td>
+                <p className="score">{index+1}</p>
               </td>
               <td>
                 <p className="title">

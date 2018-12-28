@@ -15,7 +15,7 @@ class SubThreads extends React.Component {
     var _this = this;
     var cbname = `fn${Date.now()}`;
     var script = document.createElement("script");
-    script.src = `https://www.reddit.com/r/${subName}.json?sort=top&t=month&jsonp=${cbname}`;
+    script.src = `https://www.reddit.com/r/${subName}.json?sort=top&t=month&limit=100&jsonp=${cbname}`;
     console.log(script.src);
 
     window[cbname] = function(jsonData) {

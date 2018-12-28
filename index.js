@@ -12,10 +12,9 @@ const contextMenu = Menu.buildFromTemplate([
 ]);
 
 var mb = menubar({
-    index: 'http://wiry-flock.surge.sh/',
-    width: 750,
-    height: 1100,
-    icon: path.join(__dirname, 'src', 'IconTemplate.png')
+    index: 'http://localhost:3000',
+    width: 800,
+    height: 1100
 })
 
 console.log(__dirname);
