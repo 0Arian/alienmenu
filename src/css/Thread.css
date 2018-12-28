@@ -1,11 +1,11 @@
 .score {
     font-size: 36px;
-    margin: 5px;
+    margin: 15px;
     color: #afb3b9;
 }
   
 .title {
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .title a {
@@ -29,6 +29,10 @@
   margin: 15px;
 }
 
+.url {
+  color: #90CAF9;
+  text-decoration: none;
+}
 .span {
   margin-left: 7px;
 }
