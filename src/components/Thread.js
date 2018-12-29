@@ -5,6 +5,7 @@ import Moment from 'react-moment';
 
 class Thread extends React.Component {
   render() {
+    console.log(this.props.threads);
     let posts;
     if(this.props.threads.length > 1){
       posts = this.props.threads.map((post, index) => {
@@ -39,7 +40,7 @@ class Thread extends React.Component {
                       {post.data.title}                    
                     </a>
                   </p>
-                  <div className="url">{post.data.url}</div>
+                  <Link to={`/frame/${post.data.url}`} className="url">{post.data.url}</Link>
                   <p className="author">
                     Submitted <Moment fromNow>{post.data.created_utc * 1000}</Moment> by <a href={`http://reddit.com/u/${post.data.author}`}>
                       {post.data.author}</a> <Link to={post.data.permalink}><span className="span">Comments</span></Link>

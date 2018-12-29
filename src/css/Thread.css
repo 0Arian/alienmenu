@@ -22,15 +22,32 @@
   color: #90CAF9;
   text-decoration: none;
 }
+.author a:hover {
+  color: #75ff8a;
+  text-decoration: none;
+}
 
 .backLink {
   text-decoration: none;
   color: #90CAF9;
   margin: 15px;
+  background-color: transparent;
+  border: none;
+}
+
+
+.backLink:hover {
+  text-decoration: none;
+  color: #75ff8a;
+  margin: 15px;
 }
 
 .url {
   color: #90CAF9;
+  text-decoration: none;
+}
+.url:hover {
+  color: #75ff8a;
   text-decoration: none;
 }
 .span {
