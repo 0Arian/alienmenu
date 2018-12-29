@@ -27,9 +27,10 @@ class ViewPost extends React.Component {
     document.head.appendChild(script);
   }
   render() {
+    console.log(this.props.history);
     return (
       <div>
-        <Comment comments={this.state.comments} subId={this.props.match.params.subId}/>
+        <Comment comments={this.state.comments} subId={this.props.match.params.subId} history={this.props.history}/>
       </div>
     )
   }

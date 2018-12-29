@@ -8,7 +8,7 @@ class Thread extends React.Component {
     let posts;
     if(this.props.threads.length > 1){
       posts = this.props.threads.map((post, index) => {
-        if(post.data.is_self == true){
+        if(post.data.is_self === true){
           return <tr key={post.data.id}>
                 <td>
                   <p className="score">{post.data.score}</p>

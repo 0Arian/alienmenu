@@ -1,10 +1,16 @@
 import '../css/Comment.css';
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Moment from 'react-moment';
 import ReactHtmlParser from 'react-html-parser';
 
 class Comment extends React.Component {
+  constructor(props){
+    super(props);
+    this.goBack = this.goBack.bind(this);
+  }
+  goBack(){
+    this.props.history.goBack();
+  }
   render() {
     let CommentsTable, HeaderRow, title, key, headerKey;
 
@@ -66,11 +72,11 @@ class Comment extends React.Component {
           <tbody className="container">
             <tr>
               <td>
+              <button className="backLink" onClick={() => this.goBack()}>
                 <h1>
-                  <Link className="backLink" to={`/r/${this.props.subId}`}>
-                    ←
-                  </Link>
+                  ←
                 </h1>
+                </button>
               </td>
               <td>
                 <h2>
